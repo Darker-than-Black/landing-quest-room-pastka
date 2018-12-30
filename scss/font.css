@@ -1,0 +1,22 @@
+@font-face {
+	font-family:'Jura';
+	scr: url('../fonts/Jura-Regular.ttf');
+}
+@font-face { 
+	font-family:'Jura';
+	src:url("../fonts/Jura-Light.ttf");
+	font-weight:300;
+}
+@font-face {
+	font-family:'Jura';
+	src:url("../fonts/Jura-Medium.ttf");
+	font-weight:500;
+}
+@font-face {
+	font-family: 'Jura DemiBold';
+	scr: url('../fonts/JuraDemiBold.ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/*# sourceMappingURL=font.css.map */
