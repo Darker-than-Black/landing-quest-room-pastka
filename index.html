@@ -10,6 +10,9 @@
 	<link rel="stylesheet" type="text/css" href="./scss/style.css">
 	<link rel="stylesheet" type="text/css" href="./scss/font.css">
 	<!-- <link rel="stylesheet" type="text/css" href="./scss/bootstrap/bootstrap-grid.css"> -->
+
+	 <link href="http://uk.allfont.net/allfont.css?fonts=jura-demi-bold" rel="stylesheet" type="text/css" />
+
 </head>
 <body>
 	<header class="header">
@@ -17,10 +20,10 @@
 			<div class="header__logo">
 				<img src="./img/logo.png" alt="" class="header__logo--img">
 			</div>
-
+			
 			<ul class="header__nav">
 				<li class="nav-item">
-					<a href="" class="nav-link">
+					<a href="#guests" class="nav-link">
 						Про квесты
 					</a>
 				</li>
@@ -38,26 +41,21 @@
 				</li>
 
 				<li class="nav-item">
-					<a href="" class="nav-link">
+					<a href="#contacts" class="nav-link">
 						Контакты
 					</a>
 				</li>
 			</ul>
 			<div class="header__btn-container">
-				<button class="header__btn">
+				<a href="#booking" class="header__btn">
 					Забронировать
-				</button>
-			</div>
-			
-
-			<div class="header__mobile-toggler">
-				
+				</a>
 			</div>
 		</div>
 	</header>
 
 	<main>
-		<article class="in_game">
+		<article class="in_game" id="inGame">
 			<div class="triangle triangle--big">
 				<img src="./img/triangle/triangle large.png">
 			</div>
@@ -95,7 +93,7 @@
 			</div>
 		</article>
 
-		<article class="quest quest__legion">
+		<article class="quest quest__legion quest__legion--one" id="guests">
 			<h2 class="title__article title__quest">
 				Про Квесты
 			</h2>
@@ -129,9 +127,9 @@
 								
 
 								<div class="quest__qroup">
-									<button class="quest__btn">
+									<a class="quest__btn" href="#booking" onclick="openTabs(event, 'room-one')">
 										Забронировать
-									</button>
+									</a>
 								</div>
 							</div>
 						</div>
@@ -143,19 +141,23 @@
 				<div class="quest__discont--img">
 					<img src="./img/50%.png">
 				</div>
+				<span class="quest__discont--text">
+					скидка
+				</span>
 			</div>
 		</article>
 
-		<article class="quest quest__legion">
+		<article class="quest quest__legion quest__legion--two">
+			<div class="triangle triangle--smallDown">
+				<img src="./img/triangle/triangle_s.png">
+			</div>
+
 			<div class="quest__conteiner">
 				<div class="quest__row">
 					<div class="col-12 col-md-6">
-						<img src="./img/quests/quest1.png" class="quest__img">
-					</div>
-					<div class="col-12 col-md-6">
 						<div class="quest__content">
 							<div class="quest__img--small">
-								<img src="./img/circ.png" alt="">
+								<img src="./img/circ 2.png" alt="">
 							</div>
 
 							<h3 class="quest__title">
@@ -175,22 +177,555 @@
 								
 
 								<div class="quest__qroup">
-									<button class="quest__btn">
+									<a class="quest__btn" href="#booking" onclick="openTabs(event, 'room-two')">
 										Забронировать
-									</button>
+									</a>
 								</div>
 							</div>
 						</div>
+					</div>
+					<div class="col-12 col-md-6">
+						<img src="./img/quests/quest2.png" class="quest__img">
 					</div>
 				</div>		
 			</div>
 		</article>
 
+		<article class="quest quest__legion quest__legion--one quest__legion--three">
+			<div class="triangle triangle--smallDown">
+				<img src="./img/triangle/triangle_s.png">
+			</div>
 
+			<div class="quest__conteiner">
+				<div class="quest__row">
+					<div class="col-12 col-md-6">
+						<img src="./img/quests/quest3.png" class="quest__img">
+					</div>
+					<div class="col-12 col-md-6">
+						<div class="quest__content">
+							<div class="quest__img--small">
+								<img src="./img/circ3.png" alt="">
+							</div>
+
+							<h3 class="quest__title">
+								Экшен-квест "LEGION"
+							</h3>
+							<p class="quest__text">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ullamcorper lorem rhoncus sagittis malesuada. Duis nisi justo, elementum ac tellus eget, ultrices egestas risus. Praesent nisl tortor, dapibus eu lacus non, efficitur ullamcorper mi. Fusce aliquet tincidunt hendrerit.
+							</p>
+
+							<div class="quest__down_content">
+								<div class="quest__qroup">
+									<p class="quest__text">Location: King's Cross</p>
+									<p class="quest__text">Number of Players: 4-6</p>
+									<p class="quest__text">Difficulty Rating: </p>
+									<p class="quest__text">Escape Rate: 25-30%</p>
+								</div>
+								
+
+								<div class="quest__qroup">
+									<a class="quest__btn" href="#booking" onclick="openTabs(event, 'room-three')">
+										Забронировать
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</article>
+
+		<article class="booking" id="booking">
+			<h2 class="title__article title__quest">
+				Бронирование
+			</h2>
+
+			<div class="booking__tabs">
+				<nav class="boking__tabs--nav">
+					<button class="tab--link" onclick="openTabs(event, 'room-one')" id="open">	
+						>> квест рум 1
+					</button>
+					<button class="tab--link" onclick="openTabs(event, 'room-two')" id="">
+						>> квест рум 2
+					</button>
+					<button class="tab--link" onclick="openTabs(event, 'room-three')" id="">
+						>> квест рум 3
+					</button>
+
+
+				</nav>
+				<div class="booking__tabs--tables">
+					<table class="tabs__table" id="room-one" >
+						<tr>
+							<td></td>
+							<td>29 октября</td>
+							<td>29 октября</td>
+							<td>29 октября</td>
+							<td>29 октября</td>
+							<td>29 октября</td>
+							<td>29 октября</td>
+							<td>29 октября</td>
+						</tr>
+						<tr>
+							<td>9:30</td>
+							<td>
+								<span class="booking__off"></span>
+							</td>
+							<td class="booking__sold-out">
+								Продано
+							</td>
+							<td data-time="03.01.2019 13:00" class="booking__free">						
+							</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>9:30</td>
+							<td>
+								<span class="booking__off"></span>
+							</td>
+							<td class="booking__sold-out">
+								Продано
+							</td>
+							<td data-time="03.01.2019 13:00" class="booking__free">						
+							</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>9:30</td>
+							<td>
+								<span class="booking__off"></span>
+							</td>
+							<td class="booking__sold-out">
+								Продано
+							</td>
+							<td data-time="03.01.2019 13:00" class="booking__free">						
+							</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>9:30</td>
+							<td>
+								<span class="booking__off"></span>
+							</td>
+							<td class="booking__sold-out">
+								Продано
+							</td>
+							<td data-time="03.01.2019 13:00" class="booking__free">						
+							</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>9:30</td>
+							<td>
+								<span class="booking__off"></span>
+							</td>
+							<td class="booking__sold-out">
+								Продано
+							</td>
+							<td data-time="03.01.2019 13:00" class="booking__free">						
+							</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>9:30</td>
+							<td>
+								<span class="booking__off"></span>
+							</td>
+							<td class="booking__sold-out">
+								Продано
+							</td>
+							<td data-time="03.01.2019 13:00" class="booking__free">						
+							</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>9:30</td>
+							<td>
+								<span class="booking__off"></span>
+							</td>
+							<td class="booking__sold-out">
+								Продано
+							</td>
+							<td data-time="03.01.2019 13:00" class="booking__free">						
+							</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+					</table>
+
+					<table class="tabs__table" id="room-two" style="background-color: red;">
+						<tr>
+							<td></td>
+							<td>29 октября</td>
+							<td>29 октября</td>
+							<td>29 октября</td>
+							<td>29 октября</td>
+							<td>29 октября</td>
+							<td>29 октября</td>
+							<td>29 октября</td>
+						</tr>
+						<tr>
+							<td>9:30</td>
+							<td>
+								<span class="booking__off"></span>
+							</td>
+							<td class="booking__sold-out">
+								Продано
+							</td>
+							<td data-time="03.01.2019 13:00" class="booking__free">						
+							</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>9:30</td>
+							<td>
+								<span class="booking__off"></span>
+							</td>
+							<td class="booking__sold-out">
+								Продано
+							</td>
+							<td data-time="03.01.2019 13:00" class="booking__free">						
+							</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>9:30</td>
+							<td>
+								<span class="booking__off"></span>
+							</td>
+							<td class="booking__sold-out">
+								Продано
+							</td>
+							<td data-time="03.01.2019 13:00" class="booking__free">						
+							</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>9:30</td>
+							<td>
+								<span class="booking__off"></span>
+							</td>
+							<td class="booking__sold-out">
+								Продано
+							</td>
+							<td data-time="03.01.2019 13:00" class="booking__free">						
+							</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>9:30</td>
+							<td>
+								<span class="booking__off"></span>
+							</td>
+							<td class="booking__sold-out">
+								Продано
+							</td>
+							<td data-time="03.01.2019 13:00" class="booking__free">						
+							</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>9:30</td>
+							<td>
+								<span class="booking__off"></span>
+							</td>
+							<td class="booking__sold-out">
+								Продано
+							</td>
+							<td data-time="03.01.2019 13:00" class="booking__free">						
+							</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>9:30</td>
+							<td>
+								<span class="booking__off"></span>
+							</td>
+							<td class="booking__sold-out">
+								Продано
+							</td>
+							<td data-time="03.01.2019 13:00" class="booking__free">						
+							</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+					</table>
+
+					<table class="tabs__table" id="room-three" style="background-color: green;">
+						<tr>
+							<td></td>
+							<td>29 октября</td>
+							<td>29 октября</td>
+							<td>29 октября</td>
+							<td>29 октября</td>
+							<td>29 октября</td>
+							<td>29 октября</td>
+							<td>29 октября</td>
+						</tr>
+						<tr>
+							<td>9:30</td>
+							<td>
+								<span class="booking__off"></span>
+							</td>
+							<td class="booking__sold-out">
+								Продано
+							</td>
+							<td data-time="03.01.2019 13:00" class="booking__free">						
+							</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>9:30</td>
+							<td>
+								<span class="booking__off"></span>
+							</td>
+							<td class="booking__sold-out">
+								Продано
+							</td>
+							<td data-time="03.01.2019 13:00" class="booking__free">						
+							</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>9:30</td>
+							<td>
+								<span class="booking__off"></span>
+							</td>
+							<td class="booking__sold-out">
+								Продано
+							</td>
+							<td data-time="03.01.2019 13:00" class="booking__free">						
+							</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>9:30</td>
+							<td>
+								<span class="booking__off"></span>
+							</td>
+							<td class="booking__sold-out">
+								Продано
+							</td>
+							<td data-time="03.01.2019 13:00" class="booking__free">						
+							</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>9:30</td>
+							<td>
+								<span class="booking__off"></span>
+							</td>
+							<td class="booking__sold-out">
+								Продано
+							</td>
+							<td data-time="03.01.2019 13:00" class="booking__free">						
+							</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>9:30</td>
+							<td>
+								<span class="booking__off"></span>
+							</td>
+							<td class="booking__sold-out">
+								Продано
+							</td>
+							<td data-time="03.01.2019 13:00" class="booking__free">						
+							</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>9:30</td>
+							<td>
+								<span class="booking__off"></span>
+							</td>
+							<td class="booking__sold-out">
+								Продано
+							</td>
+							<td data-time="03.01.2019 13:00" class="booking__free">						
+							</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</article>
+
+		<article class="contacts" id="contacts">
+			<div class="triangle triangle--smallUp">
+				<img src="./img/triangle/triangle_s.png">
+			</div>
+
+			<div class="triangle triangle--smallDown">
+				<img src="./img/triangle/triangle_s.png">
+			</div>
+			
+
+			<h2 class="title__wrapper">
+				ГДЕ НАС НАЙТИ
+			</h2>
+
+			<h1 class="title__article">
+				Контакты
+			</h1>
+
+			<div class="contacts__container">
+				<div class="col-12 col-md-6">
+					<p>
+						<span class="title__quest">
+							>>
+						</span>
+						How To Reach Us
+					</p>
+					<p>
+						We are a 2 minute walk away from Highbury and Islington Station, on the lively Holloway Road.
+					</p>
+					<p>
+						Turn left as you exit the station and keep the left side of the street for about 300 meters.
+					</p>
+				</div>
+				<div class="col-12 col-md-6">
+				</div>
+			</div>
+		</article>
+
+		<article class="booking contactsMap">
+			<div class="contactsMap__wrapper">
+				<div class="contactsMap__conteiner">
+					<div class="contactsMap__conteiner--img">
+						<div class="contactsMap__conteiner--wrapper">
+							<img src="./img/location.png">
+
+							<div class="contactsMap__info--shadow">
+								
+							</div>
+							<div class="contactsMap__info--wrapper">
+								<div class="contactsMap__info--conteiner">
+									<h5>Контакты</h5>
+									<p>Открыты: 10:00 - 22:00</p>
+									<p>Адрес: 89 Holloway, London</p>
+									<p>Тел.: 084-39-2849</p>
+									<p>E-mail: info@pastka.co.ua</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</article>
 	</main>
 
-	<footer>
-		
+	<footer class="footer">
+		<div class="footer__wrapper">
+			<div class="footer__conteiner">
+				<div class="footer__logo">
+					<img src="./img/logo.png">
+				</div>
+
+				<div class="footer__text">
+					Погружение в увлекательное развлечение: находить подсказки, решать головоломки и бежать со всех ног.
+				</div>
+
+				<div class="footer__nav">
+					<ul class="footer__nav--site">
+						<li><a href="#inGame">Главная</a></li>
+						<li><a href="#guests">Про квесты</a></li>
+						<li><a href="">Акции</a></li>
+						<li><a href="#contacts">Контакты</a></li>
+					</ul>
+
+					<ul class="footer__nav--social-networks">
+						<li><a href="">Facebook</a></li>
+						<li><a href="">Instagram</a></li>
+						<li><a href="">Twitter</a></li>
+					</ul>
+				</div>
+
+				<div class="footer__contact">
+					<span>
+						<img src="./img/mail.svg">
+						info@omescapelondon.co.uk	
+					</span>
+					<span>
+						<img src="./img/phone-call.svg">
+						0207 278 5200
+					</span>      
+				</div>
+			</div>
+		</div>
 	</footer>
+
+	<div class="modal" style="display: none;">
+		<div class="modal__wrapper">
+			<div class="modal__conteiner">
+				popup
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="./js/jquery.min.js"></script>
+	<script type="text/javascript" src="./js/main.js"></script>
 </body>
 </html>
