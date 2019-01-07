@@ -15,7 +15,7 @@
 
 </head>
 <body>
-	<header class="header">
+	<header class="header" id="header">
 		<div class="header__wrapper">
 			<div class="header__logo">
 				<img src="./img/logo.png" alt="" class="header__logo--img">
@@ -23,7 +23,7 @@
 			
 			<ul class="header__nav">
 				<li class="nav-item">
-					<a href="#guests" class="nav-link">
+					<a href="#guests" class="nav-link" data-path="guests">
 						Про квесты
 					</a>
 				</li>
@@ -41,13 +41,13 @@
 				</li>
 
 				<li class="nav-item">
-					<a href="#contacts" class="nav-link">
+					<a href="#contacts" class="nav-link" data-path="contacts">
 						Контакты
 					</a>
 				</li>
 			</ul>
 			<div class="header__btn-container">
-				<a href="#booking" class="header__btn">
+				<a href="#booking" class="header__btn" data-path="booking">
 					Забронировать
 				</a>
 			</div>
@@ -57,7 +57,7 @@
 	<main>
 		<article class="in_game" id="inGame">
 			<div class="triangle triangle--big">
-				<img src="./img/triangle/triangle large.png">
+				<img src="./img/triangle/triangle large 2.png">
 			</div>
 
 			<div class="triangle triangle--smallUp">
@@ -84,12 +84,12 @@
 			</div>	
 
 			<div class="in_game__btn">
-				<button>
+				<a>
 					Узнать больше
-				</button>
-				<button>
+				</a>
+				<a href="#booking" data-path="booking">
 					Забронировать
-				</button>
+				</a>
 			</div>
 		</article>
 
@@ -97,6 +97,10 @@
 			<h2 class="title__article title__quest">
 				Про Квесты
 			</h2>
+
+			<div class="triangle triangle--big">
+				<img src="./img/triangle/triangle large 2.png">
+			</div>
 
 
 			<div class="quest__conteiner">
@@ -127,7 +131,7 @@
 								
 
 								<div class="quest__qroup">
-									<a class="quest__btn" href="#booking" onclick="openTabs(event, 'room-one')">
+									<a class="quest__btn" href="#booking" data-path="booking" onclick="openTabs(event, 'room-one', 2)">
 										Забронировать
 									</a>
 								</div>
@@ -177,7 +181,7 @@
 								
 
 								<div class="quest__qroup">
-									<a class="quest__btn" href="#booking" onclick="openTabs(event, 'room-two')">
+									<a class="quest__btn" href="#booking" data-path="booking" onclick="openTabs(event, 'room-two', 1)">
 										Забронировать
 									</a>
 								</div>
@@ -224,7 +228,7 @@
 								
 
 								<div class="quest__qroup">
-									<a class="quest__btn" href="#booking" onclick="openTabs(event, 'room-three')">
+									<a class="quest__btn" href="#booking" data-path="booking" onclick="openTabs(event, 'room-three', 0)">
 										Забронировать
 									</a>
 								</div>
@@ -242,18 +246,19 @@
 			</h2>
 
 			<div class="booking__tabs">
-				<nav class="boking__tabs--nav">
-					<button class="tab--link" onclick="openTabs(event, 'room-one')" id="open">	
-						>> квест рум 1
-					</button>
-					<button class="tab--link" onclick="openTabs(event, 'room-two')" id="">
-						>> квест рум 2
-					</button>
-					<button class="tab--link" onclick="openTabs(event, 'room-three')" id="">
+				<nav class="booking__tabs--nav">
+					<!-- !!! Зверни увагу що тут пунтки в обратному порядку, так потрібно !!! -->
+					<button class="tab--link" onclick="openTabs(event, 'room-three', 0)">
 						>> квест рум 3
 					</button>
-
-
+					<button class="tab--link" onclick="openTabs(event, 'room-two', 1)">
+						>> квест рум 2
+					</button>
+					<button class="tab--link openTab" onclick="openTabs(event, 'room-one', 2)">
+						>> квест рум 1
+					</button>
+				
+				
 				</nav>
 				<div class="booking__tabs--tables">
 					<table class="tabs__table" id="room-one" >
@@ -690,10 +695,10 @@
 
 				<div class="footer__nav">
 					<ul class="footer__nav--site">
-						<li><a href="#inGame">Главная</a></li>
-						<li><a href="#guests">Про квесты</a></li>
+						<li><a href="#header" dara-path="header">Главная</a></li>
+						<li><a href="#guests" data-path="guests">Про квесты</a></li>
 						<li><a href="">Акции</a></li>
-						<li><a href="#contacts">Контакты</a></li>
+						<li><a href="#contacts" data-path="contacts">Контакты</a></li>
 					</ul>
 
 					<ul class="footer__nav--social-networks">
@@ -719,8 +724,13 @@
 
 	<div class="modal" style="display: none;">
 		<div class="modal__wrapper">
+			<!-- <div class="modal__img modal__img--leftTop">
+				<img src="./img/circ.png" alt=" ">
+			</div>
+			<div class="modal__img modal__img--downRight">
+				<img src="./img/circ.png" alt=" ">
+			</div> -->
 			<div class="modal__conteiner">
-				popup
 			</div>
 		</div>
 	</div>
