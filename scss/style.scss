@@ -371,12 +371,9 @@ article {
 				     0 0 20px rgba(253,80,85,0.78),
 				     0 0 40px rgba(253,80,85,0.92);
     	}
-    	// position: absolute;
-    	// left: 7vw;
-    	// bottom: -11em;
     }
 	&__legion {
-		background-image: url('../img/bg/trongrid_cRDJXy1d_1.png');
+		background-image: url('../img/bg/bg1.png');
 		background-repeat: no-repeat;
 	    background-size: contain;
 		// background-size: contain;
@@ -432,7 +429,7 @@ article {
 			}
 	    }
 	    &--two {
-	    	background-image: url('../img/bg/trongrid_cRDJXy1d_1.png'), url('../img/bg/trongrid_cRDJXy1d_2.png');
+	    	background-image: url('../img/bg/bg1.png'), url('../img/bg/bg2.png');
 			background-repeat: no-repeat, no-repeat;
 		    background-size: contain, contain;
 	    	background-position: right -73vh, left 70vh;
@@ -519,7 +516,7 @@ article {
 			}
 	    }
 	    &--three {
-	    	background-image: url('../img/bg/trongrid_cRDJXy1d_2.png');
+	    	background-image: url('../img/bg/bg2.png');
 			background-repeat: no-repeat;
 		    background-size: contain;
 	    	background-position: left -30vh;
@@ -706,7 +703,7 @@ $sizeTriangle: 1rem;
 $xoSize: 1.5em;
 
 .booking {
-	background-image: url('../img/bg/trongrid_cRDJXy1d копия 3.png'), url('../img/bg/trongrid_cRDJXy1d копия 4.png');
+	background-image: url('../img/bg/bg3.png'), url('../img/bg/bg4.png');
 	background-repeat: no-repeat, no-repeat;
     background-size: contain, contain;
     background-position: left 8vh, right 8vh;
@@ -745,12 +742,11 @@ $xoSize: 1.5em;
 	   					width: 100%;
 	   				}
     				background-color: #000;
-    				background-image: url('../img/Слой 10.png');
+    				background-image: url('../img/bg-global.png');
 					background-repeat: no-repeat;
 				    background-size: contain;
 				    background-position: left bottom;
     				border: 2px solid #fff;
-    				// min-width: 100%;
     				box-shadow: 0 0 5rem 0 rgba(26, 60, 170, .6),
     							0 0 3rem 0 rgba(26, 60, 170, .3),
     							0 0 9rem 0 rgba(26, 60, 170, .96),
@@ -939,7 +935,7 @@ $xoSize: 1.5em;
 
 .contacts {
 	position: relative;
-	background-image:  url('../img/black-iphone-png-8 копия.png'), url('../img/bg/trongrid_cRDJXy1d копия 3.png'), url('../img/bg/trongrid_cRDJXy1d копия 4.png');
+	background-image:  url('../img/iphone.png'), url('../img/bg/bg3.png'), url('../img/bg/bg4.png');
 	background-repeat: no-repeat, no-repeat, no-repeat;
     background-size: 17%, contain, contain;
     background-position: 75vw 7vh, left -92vh, right -92vh;
@@ -1021,7 +1017,7 @@ $xoSize: 1.5em;
 	    		}
 	    	}
 	    	&:last-child {
-	    		background-image:  url('../img/mapimg2 копия 2.png'), url('../img/location.png'), url('../img/location.png');
+	    		background-image:  url('../img/mapimg2.png'), url('../img/location.png'), url('../img/location.png');
 				background-repeat: no-repeat, no-repeat, no-repeat;
 			    background-size: contain, 80%, 65%;
    				background-position: left top, -84% 52%, -19% 53%;
@@ -1135,7 +1131,7 @@ $xoSize: 1.5em;
     }
     &__info {
     	&--wrapper {
-			background-image: url('../img/pop up2.png');
+			background-image: url('../img/pop-up2.png');
 			background-size: cover;
 		    padding: 7em 6em 7em 7em;
 
